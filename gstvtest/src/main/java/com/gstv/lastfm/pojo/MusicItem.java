@@ -13,7 +13,23 @@ public abstract class MusicItem {
 	protected Rank rank;
 	private int playcount;
 	protected String url;
+	protected String id;
+	@JsonProperty("releasedate")
+	protected String releaseDate;
 	
+	
+	public String getReleaseDate() {
+		return releaseDate;
+	}
+	public void setReleaseDate(String releaseDate) {
+		this.releaseDate = releaseDate;
+	}
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
 	public Collection<Image> getImage() {
 		return image;
 	}
@@ -41,6 +57,7 @@ public abstract class MusicItem {
 	public Rank getRank() {
 		return rank;
 	}
+	@JsonProperty("@attr")
 	public void setRank(Rank rank) {
 		this.rank = rank;
 	}

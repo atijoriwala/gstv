@@ -35,6 +35,7 @@ public class ArtistController {
 		 catch (NumberFormatException e) {
 			 return buildResult(_11,LIMIT_MUST_BE_NUMERIC);
 		}catch(RuntimeException e){
+			e.printStackTrace();
 			return buildResult(_12,UNKNOWN_ERROR);
 		}
 	}

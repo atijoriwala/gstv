@@ -135,6 +135,7 @@
 		</dependency>
 	</dependencies>
 	<build>
+		<finalName>gstvtest</finalName>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>

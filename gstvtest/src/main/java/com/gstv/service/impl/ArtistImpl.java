@@ -17,6 +17,7 @@ import com.gstv.lastfm.pojo.AlbumInfo;
 import com.gstv.lastfm.pojo.AlbumInfoWrapper;
 import com.gstv.lastfm.pojo.Albums;
 import com.gstv.lastfm.pojo.AlbumsWrapper;
+import com.gstv.lastfm.pojo.Rank;
 import com.gstv.service.Artist;
 import com.gstv.service.exception.NoArtistFoundException;
 import com.gstv.util.GlobalConstants;
@@ -58,6 +59,7 @@ public class ArtistImpl implements Artist {
 			AlbumInfoWrapper albumInfoWrapper = restTemplate.getForObject(
 					UrlUtil.buildUri(ALBUM_GETINFO, paramsAlbumInfo),
 					AlbumInfoWrapper.class);
+			albumInfoWrapper.getAlbum().setRank(album.getRank());
 			list.add(albumInfoWrapper.getAlbum());
 		}
 		albumsInfo.setAlbumsInfo(list);

@@ -2,6 +2,7 @@ package com.gstv.lastfm.pojo;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+
 /**
  * @author Alok Tijoriwala 
  * AlbumInfo Bean 
